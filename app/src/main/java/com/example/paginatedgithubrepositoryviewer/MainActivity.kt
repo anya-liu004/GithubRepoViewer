@@ -56,7 +56,6 @@ fun RepositoryList(repos: List<Repo>, onLoadMore: () -> Unit, hasMore: Boolean) 
         items(repos) { repo ->
             Text(repo.name, style = MaterialTheme.typography.bodyLarge)
             Text(repo.description ?: "No description", style = MaterialTheme.typography.bodySmall)
-            Divider()
         }
         if (hasMore) {
             item {

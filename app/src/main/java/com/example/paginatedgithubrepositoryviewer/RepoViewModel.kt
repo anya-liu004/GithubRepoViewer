@@ -32,15 +32,10 @@ class RepoViewModel : ViewModel() {
             try {
                 val repos = ApiClient.apiService.getRepos(currentUsername, currentPage)
                 if (repos.isEmpty()) hasMorePages = false
-
-                // Debugging Log
-                println("Fetched ${repos.size} repositories")
-
                 allRepos.addAll(repos)
                 _uiState.value = UiState.Success(allRepos, hasMorePages)
                 currentPage++
             } catch (e: Exception) {
-                println("API Error: ${e.localizedMessage}")
                 _uiState.value = UiState.Error(e.localizedMessage ?: "Unknown error")
             }
         }

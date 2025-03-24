@@ -63,4 +63,7 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
     implementation("com.squareup.moshi:moshi-adapters:1.15.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }
